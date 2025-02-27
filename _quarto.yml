@@ -1,0 +1,50 @@
+project:
+  type: seedcase-theme
+  render:
+    - "docs/*"
+    - "index.qmd"
+
+website:
+  title: "Seedcase NAME"
+  site-url: "https://NAME.seedcase-project.org/"
+  repo-url: "https://github.com/seedcase-project/REPO"
+  page-navigation: true
+  navbar:
+    pinned: true
+    title: false
+    logo: "_extensions/seedcase-project/seedcase-theme/logos/navbar-logo-seedcase-NAME.svg"
+    logo-alt: "Seedcase NAME logo: Main page"
+    left:
+      - text: "Guide"
+        href: docs/guide/index.qmd
+      - text: "Design"
+        href: docs/design/index.qmd
+    tools:
+      - icon: github
+        href: "https://github.com/seedcase-project/REPO"
+        aria-label: "GitHub icon: Source code"
+      - icon: house
+        href: https://seedcase-project.org
+        aria-label: "House icon: Seedcase Project home page"
+  sidebar:
+    - id: design
+      pinned: true
+      style: "floating"
+      contents:
+        - text: "Design"
+          href: docs/design/index.qmd
+    - id: guide
+      contents:
+        - section: "Guide"
+          href: docs/guide/index.qmd
+
+# format:
+#   seedcase-theme-html:
+    # include-before-body:
+      # - "includes/site-counter.html"
+      # - "includes/contribute.html"
+
+editor:
+  markdown:
+    wrap: 72
+    canonical: true
