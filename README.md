@@ -1,23 +1,3 @@
-# Template for Seedcase Python packages
+# Seedcase Data Example Repository for Rainforest data
 
-This repository contains a template for setting up new Python package projects in Seedcase. The first step is to create a new repository using this template. This can easily be done by clicking the "Use this template" button on the repository page or by using the GitHub CLI:
-
-``` bash
-# NAME is the name to give the new repository
-gh repo create NAME --template seedcase-project/template-python-project
-```
-
-## Setting things up after cloning
-
-To add Poetry:
-
-``` bash
-cd new-project
-poetry init
-```
-
-Search for `NAME` and `REPO` and replace them with the name of your project and the repository name. Then look for any `TODO` items.
-
-## Setting things up
-
-Use the commands found in [`spaid`](https://github.com/seedcase-project/spaid) repo to run the next setup steps.
+This repository shows how to use the Seedcase Sprout tools on a data set of seed germination in the rainforest. The data is from a study by [Urrea-Galeano et al. (2019)](https://onlinelibrary.wiley.com/doi/10.1111/btp.12631) and is available on [ZENODO](https://zenodo.org/records/4965431).
