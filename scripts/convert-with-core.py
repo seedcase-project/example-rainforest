@@ -5,8 +5,9 @@ import polars as pl
 
 resource_dir = Path(__file__).resolve().parent.parent
 folder_path = resource_dir / "data-raw"
+downloaded_path = folder_path / "downloaded"
 
-df_experiment1 = pl.read_csv(folder_path / "Expe1.csv", infer_schema_length=100_000)
+df_experiment1 = pl.read_csv(downloaded_path / "Expe1.csv", infer_schema_length=100_000)
 
 df_experiment1 = df_experiment1.rename(
     {
@@ -24,7 +25,7 @@ df_experiment1 = df_experiment1.rename(
 )
 df_experiment1.write_csv(folder_path / "data-experiment1-ready.csv")
 
-df_experiment2 = pl.read_csv(folder_path / "Expe2.csv", infer_schema_length=100_000)
+df_experiment2 = pl.read_csv(downloaded_path / "Expe2.csv", infer_schema_length=100_000)
 
 treatment_mapping1 = {
     "masHmasE": "with_feces_cover_after_48h",
@@ -51,7 +52,7 @@ df_experiment2 = (
 df_experiment2.write_csv(folder_path / "data-experiment2-ready.csv")
 
 df_abundance = pl.read_csv(
-    folder_path / "Expe3Abundance.csv", infer_schema_length=100_000
+    downloaded_path / "Expe3Abundance.csv", infer_schema_length=100_000
 )
 
 treatment_mapping2 = {
@@ -66,7 +67,7 @@ df_abundance = df_abundance.with_columns(
 )
 
 df_richness = pl.read_csv(
-    folder_path / "Expe3Richness.csv", infer_schema_length=100_000
+    downloaded_path / "Expe3Richness.csv", infer_schema_length=100_000
 )
 
 df_experiment3_all = pl.concat([df_abundance, df_richness], how="align")  # concat wide
