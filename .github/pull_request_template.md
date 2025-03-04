@@ -1,6 +1,6 @@
-## Description
+# Description
 
-This PR DESCRIBE CHANGES.
+This PR will [DESCRIBE CHANGES].
 
 Closes #
 
@@ -9,6 +9,6 @@ This PR needs a quick/an in-depth review.
 
 ## Checklist
 
-- [ ] Added or updated tests
-- [ ] Updated documentation
-- [ ] Ran `just run-all`
+- [ ] Read through for typos, added new words to the dictionary
+- [ ] Checked that the README is up to date
+- [ ] Resolved any Ruff errors / formatted in Markdown
