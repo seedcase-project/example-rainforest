@@ -28,8 +28,8 @@ df_experiment2 = pl.read_csv(folder_path / "Expe2.csv", infer_schema_length=100_
 
 treatment_mapping1 = {
     "masHmasE": "with_feces_cover_after_48h",
-    "masHmenE": "with_faces_cover_after_0h",
-    "menHmenE": "without_faces_cover_after_0h",
+    "masHmenE": "with_feces_cover_after_0h",
+    "menHmenE": "without_feces_cover_after_0h",
 }
 
 df_experiment2 = (
