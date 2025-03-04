@@ -17,9 +17,3 @@ with open(all_files_path, "wb") as file:
 # Extract the zip file
 with ZipFile(all_files_path, "r") as zip_ref:
     zip_ref.extractall(folder_path)
-
-# Rename the files to snake_case
-# for file in unzip_path.iterdir():
-#     if file.name.endswith((".csv", ".xlsx")):
-#         new_name = file.name.lower().replace(".", "_", 1)
-#         file.rename(unzip_path / new_name)
