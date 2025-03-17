@@ -1,0 +1,58 @@
+{
+  "name": "dung-beetle-activity",
+  "id": "02766086-ad82-41ad-bf8d-3cc79b3bf005",
+  "title": "Dung beetle activity affects rainforest seed bank dynamics and seedling establishment",
+  "description": "Dung beetles relocate vertebrate feces under the soil surface, and this behavior has many ecological consequences. In tropical forests, those seeds that are defecated by mammals and subsequently buried by dung beetles are less likely to suffer predation.",
+  "version": "0.1.0",
+  "created": "2025-03-13T13:43:39+01:00",
+  "contributors": [
+    {
+      "title": "Lina Adonay Urrea-Galeano",
+      "path": "https://orcid.org/0000-0001-6217-4215",
+      "roles": [
+        "creator"
+      ]
+    },
+    {
+      "title": "Ellen Andresen",
+      "path": "https://orcid.org/0000-0001-8957-4454",
+      "roles": [
+        "creator"
+      ]
+    },
+    {
+      "title": "Rosamond Coates",
+      "path": "https://orcid.org/0000-0003-0074-1565",
+      "roles": [
+        "creator"
+      ]
+    },
+    {
+      "title": "Francisco Mora Ardila",
+      "path": "https://orcid.org/0000-0003-0390-0189",
+      "roles": [
+        "creator"
+      ]
+    },
+    {
+      "title": "Guillermo Ibarra-Manr\u00edquez",
+      "path": "https://orcid.org/0000-0002-3739-8660",
+      "roles": [
+        "creator"
+      ]
+    }
+  ],
+  "licenses": [
+    {
+      "name": "CCO_1.0",
+      "path": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "title": "CCO 1.0 UNIVERSAL"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Dung beetle activity affects rainforest seed bank dynamics and seedling establishment",
+      "path": "https://zenodo.org/record/4965431"
+    }
+  ]
+}
