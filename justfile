@@ -8,10 +8,6 @@ run-all: install-deps format-python check-python check-commits
 install-deps:
   poetry install
 
-# Run the Python tests
-test-python:
-  poetry run pytest
-
 # Check Python code with the linter for any errors that need manual attention
 check-python:
   poetry run ruff check .
@@ -32,3 +28,7 @@ check-commits:
   else
     echo "Not on main or haven't committed yet."
   fi
+
+# Update all dependencies in lockfile
+update-deps:
+  poetry update
