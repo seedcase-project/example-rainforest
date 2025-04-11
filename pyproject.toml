@@ -1,31 +1,35 @@
-[tool.poetry]
+[project]
 name = "example-rainforest"
-version = "0.0.1"
-description = ""
+version = "0.1.0"
+description = "Add your description here"
 authors = [
-  "Luke W. Johnston <lwjohnst@gmail.com>",
-  "Kristiane Beicher <kris.beicher@clin.au.dk>",
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
 ]
 maintainers = [
-  "Luke W. Johnston <lwjohnst@gmail.com>",
-  "Kristiane Beicher <kris.beicher@clin.au.dk>",
+  {name = "Luke W. Johnston", email = "lwjohnst@gmail.com" },
+  {name = "Kristiane Beicher", email = "kris.beicher@clin.au.dk" },
 ]
 readme = "README.md"
-repository = "https://github.com/seedcase-project/example-rainforest"
 license = "MIT"
+license-files = ["LICENSE.md"]
+requires-python = ">=3.12"
+dependencies = [
+    "polars>=1.27.0",
+    "pyjanitor>=0.31.0",
+    "seedcase-sprout",
+]
 
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/seedcase-project/example-rainforest/issues"
+[project.urls]
+issues = "https://github.com/seedcase-project/example-rainforest/issues"
+repository = "https://github.com/seedcase-project/example-rainforest"
 
-[tool.poetry.dependencies]
-python = "^3.12"
-polars = "^1.23.0"
-seedcase-sprout = {git = "https://github.com/seedcase-project/seedcase-sprout.git"}
-pyjanitor = "^0.30.0"
+[tool.uv.sources]
+seedcase-sprout = { git = "https://github.com/seedcase-project/seedcase-sprout" }
 
-[tool.poetry.group.dev.dependencies]
-ruff = "^0.6.2"
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "commitizen>=4.5.1",
+    "pre-commit>=4.2.0",
+    "ruff>=0.11.4",
+]
