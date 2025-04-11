@@ -2,7 +2,10 @@ from pathlib import Path
 
 import seedcase_sprout.core as sp
 
+default_properties = sp.PackageProperties.default().compact_dict
+
 properties = sp.PackageProperties(
+    **default_properties,
     name="dung-beetle-activity",
     title=(
         "Dung beetle activity affects rainforest seed bank dynamics "
@@ -61,4 +64,7 @@ properties = sp.PackageProperties(
 
 # Create the path to the package
 package_path = Path(__file__).resolve().parent.parent
-package_path = sp.create_package_properties(properties=properties, path=package_path)
+
+sp.write_package_properties(
+    properties=properties, path=sp.PackagePath(package_path).properties()
+)

@@ -2,7 +2,13 @@ from pathlib import Path
 
 import seedcase_sprout.core as sp
 
-properties = sp.PackageProperties(
+package_path = Path(__file__).resolve().parent.parent
+
+current_properties = sp.read_properties(
+    path=sp.PackagePath(package_path).properties(),
+)
+
+updated_properties = sp.PackageProperties(
     description=(
         "Dung beetles relocate vertebrate feces under the soil surface, "
         "and this behavior has many ecological consequences. In tropical forests, "
@@ -11,13 +17,12 @@ properties = sp.PackageProperties(
     ),
 )
 
-package_path = Path(__file__).resolve().parent.parent / "datapackage.json"
-
-updated_package_properties = sp.edit_package_properties(
-    path=package_path,
-    properties=properties,
+updated_package_properties = sp.update_package_properties(
+    current_properties=current_properties,
+    update_properties=updated_properties,
 )
 
-package_path = sp.write_package_properties(
-    properties=updated_package_properties, path=package_path
+sp.write_package_properties(
+    properties=updated_package_properties,
+    path=sp.PackagePath(package_path).properties(),
 )
