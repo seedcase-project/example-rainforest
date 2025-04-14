@@ -6,16 +6,16 @@ run-all: install-deps format-python check-python check-commits
 
 # Install Python package dependencies
 install-deps:
-  poetry install
+  uv sync --upgrade --dev
 
 # Check Python code with the linter for any errors that need manual attention
 check-python:
-  poetry run ruff check .
+  uv run ruff check .
 
 # Reformat Python code to match coding style and general structure
 format-python:
-  poetry run ruff check --fix .
-  poetry run ruff format .
+  uv run ruff check --fix .
+  uv run ruff format .
 
 # Run checks on commits with non-main branches
 check-commits:
@@ -24,11 +24,7 @@ check-commits:
   number_of_commits=$(git rev-list --count HEAD ^$branch_name)
   if [[ ${branch_name} != "main" && ${number_of_commits} -gt 0 ]]
   then
-    poetry run cz check --rev-range main..HEAD
+    uv run cz check --rev-range main..HEAD
   else
     echo "Not on main or haven't committed yet."
   fi
-
-# Update all dependencies in lockfile
-update-deps:
-  poetry update
